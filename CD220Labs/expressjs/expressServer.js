@@ -28,6 +28,13 @@ app.get("/:name", (req, res) => {
     res.send("Hello " + req.params.name);
 });
 
+app.get("/month/:month", (req, res) => {
+    const months = ["jan","feb"];
+    const index = parseInt(req.params.month) - 1;
+    const month = (0 <= index && index < months.length) ? months[index] : "invalid";
+    res.send("Month " + month);
+});
+
 // Start the server and listen on port 3333
 app.listen(3333, () => {
     console.log(`Listening at http://localhost:3333`);
