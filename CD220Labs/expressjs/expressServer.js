@@ -9,7 +9,7 @@ let loginDetails = [];
 
 // Define the root route to send a welcome message
 app.get("/", (req, res) => {
-    res.send("Welcome to the express server");
+    res.send("Welcome to the express server!!");
 });
 
 // Define a route to send login details as a JSON string
